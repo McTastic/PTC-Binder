@@ -1,0 +1,23 @@
+[
+  {
+    "action": "sell",
+    "stock": 1,
+    "price": "5.99",
+    "card_id": 2,
+    "binder_id": 1
+  },
+  {
+    "action": "buy",
+    "stock": 1,
+    "price": "10.99",
+    "card_id": 3,
+    "binder_id": 1
+  },
+  {
+    "action": "buy",
+    "stock": 1,
+    "price": "8.99",
+    "card_id": 4,
+    "binder_id": 1
+  }
+]

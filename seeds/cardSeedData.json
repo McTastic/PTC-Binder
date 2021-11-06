@@ -1,0 +1,17 @@
+[
+  {
+    "card_name": "holographic charizard",
+    "description": "fancy card",
+    "pokemon_id": 2
+  },
+  {
+    "card_name": "holographic squirtle",
+    "description": "shiny card",
+    "pokemon_id": 3
+  },
+  {
+    "card_name": "super pikachu",
+    "description": "mint condition",
+    "pokemon_id": 1
+  }
+]
