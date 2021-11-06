@@ -1,0 +1,24 @@
+.navbar {
+    margin-bottom: 50px;
+    border-radius: 0;
+  }
+
+  /* Remove the jumbotron's default bottom margin */
+  .jumbotron {
+    margin-bottom: 0;
+  }
+
+  #logo {
+      background-image: url(./assets/images/main-logo.webp);
+      background-size: 180px;
+      background-repeat: no-repeat;
+      background-position: center;
+      width: auto;
+      height: 160px;
+  }
+
+  /* Add a gray background color and some padding to the footer */
+  footer {
+    background-color: #f2f2f2;
+    padding: 25px;
+  }
