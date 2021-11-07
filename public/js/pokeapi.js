@@ -9,7 +9,7 @@ const getCard = async () => {
   let userInput = document.querySelector("#pokemon-name").value;
   let cardEl = document.querySelector(".pokemonCard");
   let currentPageEl = document.querySelector(".pageCount");
-  // const apiKey = process.env("X_API_KEY"); //*REMOVE COMMENT ONCE ADDED
+  // const apiKey = process.env("X_API_KEY"); 
   cardEl.innerHTML = "";
   try {
     const response = await fetch(
@@ -32,7 +32,7 @@ const getCard = async () => {
       if (currentPage > 1) {
         prevBtn.disabled = false;
       }
-      if (cardCount < 9) {
+      if (currentPage / pageTotal === 1) {
         nextBtn.disabled = true;
       } else {
         nextBtn.disabled = false;
