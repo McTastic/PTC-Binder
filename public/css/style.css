@@ -1,24 +1,43 @@
+:root {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+/* Remove the navbar's default rounded borders and increase the bottom margin */
 .navbar {
-    margin-bottom: 50px;
-    border-radius: 0;
-  }
+  margin-bottom: 1rem;
+  border-radius: 0;
+}
 
-  /* Remove the jumbotron's default bottom margin */
-  .jumbotron {
-    margin-bottom: 0;
-  }
+/* Remove the jumbotron's default bottom margin */
+.jumbotron {
+  padding: 2rem 1rem;
+  background-color: #e9ecef;
+  border-radius: 0.3rem;
+}
 
-  #logo {
-      background-image: url(./assets/images/main-logo.webp);
-      background-size: 180px;
-      background-repeat: no-repeat;
-      background-position: center;
-      width: auto;
-      height: 160px;
-  }
+main {
+  /* subtracting from px of jumbotron, nav & footer */
+  min-height: calc(100vh - 342px);
+}
 
-  /* Add a gray background color and some padding to the footer */
-  footer {
-    background-color: #f2f2f2;
-    padding: 25px;
-  }
+#logo {
+  background-image: url(./public/assets/images/main-logo.webp);
+  background-size: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: auto;
+  height: 160px;
+}
+
+#search > input {
+  max-width: 50%;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
