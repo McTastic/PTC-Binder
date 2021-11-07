@@ -4,178 +4,179 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
     />
     <script
+      defer
       src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     ></script>
     <script
-      src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"
     ></script>
-    <style>
-      /* Remove the navbar's default rounded borders and increase the bottom
-      margin */ .navbar { margin-bottom: 50px; border-radius: 0; } /* Remove the
-      jumbotron's default bottom margin */ .jumbotron { margin-bottom: 0; } /*
-      Add a gray background color and some padding to the footer */ footer {
-      background-color: #f2f2f2; padding: 25px; }
-    </style>
   </head>
   <body>
-    <div class="jumbotron">
+    <div class="jumbotron" id="logo">
       <div class="container text-center">
-        <h1>Pokemon Trading Card Game</h1>
-        <p>Mission, Vission & Values</p>
+        <h2></h2>
       </div>
     </div>
 
-    <nav class="navbar navbar-inverse">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target="#myNavbar"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Logo</a>
-        </div>
-        <div class="collapse navbar-collapse" id="myNavbar">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Deals</a></li>
-            <li><a href="#">Stores</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <a href="#"><span class="glyphicon glyphicon-user"></span>
-                Your Account</a>
+        <a class="navbar-brand" href="#">Welcome!</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
             </li>
-            <li>
-              <a href="#"><span
-                  class="glyphicon glyphicon-shopping-cart"
-                ></span>
-                Cart</a>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Binder</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Login</a>
             </li>
           </ul>
+          <span class="navbar-text"> Gotta Catch 'Em All! </span>
         </div>
       </div>
     </nav>
 
-    <div class="container">
+    <main>
+      <div class="container-fluid text-center">
+        <form
+          class="form-inline d-flex justify-content-center mb-3"
+          id="search"
+        >
+          <input
+            type="text"
+            class="form-control"
+            size="50"
+            placeholder="Search..."
+          />
+          <button type="button" class="btn btn-danger">Go!</button>
+        </form>
+      </div>
+
       <div class="row">
-        <div class="col-sm-4">
+        <div class="col-sm-12 col-md-4 order-sm-1 order-md-0">
           <div class="panel panel-primary">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
+            <div class="panel-heading">WHO'S THAT POKEMON?</div>
             <div class="panel-body">
               <img
-                src="https://placehold.it/150x80?text=IMAGE"
+                src="https://picsum.photos/100/50"
                 class="img-responsive"
                 style="width: 100%"
                 alt="Image"
               />
             </div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            <div class="panel-footer">It's Diglett!</div>
           </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="panel panel-danger">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body">
-              <img
-                src="https://placehold.it/150x80?text=IMAGE"
-                class="img-responsive"
-                style="width: 100%"
-                alt="Image"
-              />
-            </div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-          </div>
-        </div>
-        <div class="col-sm-4">
           <div class="panel panel-success">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
+            <div class="panel-heading">WHO'S THAT POKEMON?</div>
             <div class="panel-body">
               <img
-                src="https://placehold.it/150x80?text=IMAGE"
+                src="https://picsum.photos/100/50"
                 class="img-responsive"
                 style="width: 100%"
                 alt="Image"
               />
             </div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+            <div class="panel-footer">It's Jigglypuff!</div>
+          </div>
+          <div class="panel panel-primary">
+            <div class="panel-heading">WHO'S THAT POKEMON?</div>
+            <div class="panel-body">
+              <img
+                src="https://picsum.photos/100/50"
+                class="img-responsive"
+                style="width: 100%"
+                alt="Image"
+              />
+            </div>
+            <div class="panel-footer">It's Exeggutor!</div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-8 order-sm-0 order-md-1">
+          <div class="panel panel-danger">
+            <div
+              id="carouselExampleControls"
+              class="carousel slide"
+              data-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    class="d-block w-100"
+                    src="https://picsum.photos/800"
+                    alt="First slide"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block w-100"
+                    src="https://picsum.photos/800"
+                    alt="Second slide"
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    class="d-block w-100"
+                    src="https://picsum.photos/800"
+                    alt="Third slide"
+                  />
+                </div>
+              </div>
+              <a
+                class="carousel-control-prev"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a
+                class="carousel-control-next"
+                href="#carouselExampleControls"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <br />
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="panel panel-primary">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body">
-              <img
-                src="https://placehold.it/150x80?text=IMAGE"
-                class="img-responsive"
-                style="width: 100%"
-                alt="Image"
-              />
-            </div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="panel panel-primary">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body">
-              <img
-                src="https://placehold.it/150x80?text=IMAGE"
-                class="img-responsive"
-                style="width: 100%"
-                alt="Image"
-              />
-            </div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="panel panel-primary">
-            <div class="panel-heading">BLACK FRIDAY DEAL</div>
-            <div class="panel-body">
-              <img
-                src="https://placehold.it/150x80?text=IMAGE"
-                class="img-responsive"
-                style="width: 100%"
-                alt="Image"
-              />
-            </div>
-            <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br /><br />
-
+    </main>
     <footer class="container-fluid text-center">
-      <p>Online Store Copyright</p>
-      <form class="form-inline">
-        Get deals:
-        <input
-          type="email"
-          class="form-control"
-          size="50"
-          placeholder="Email Address"
-        />
-        <button type="button" class="btn btn-danger">Sign Up</button>
-      </form>
+      <p>&copy 2021</p>
     </footer>
   </body>
 </html>
