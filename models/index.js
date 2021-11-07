@@ -1,4 +1,4 @@
-const Account = require("./accounts");
+const User = require("./User");
 const Card = require("./cards");
 const Binder = require("./binder");
 const Pokemon = require("./pokemon");
@@ -6,12 +6,12 @@ const Type = require("./types");
 const Inventory = require("./inventory");
 const CardPokemon = require("./card_pokemon");
 
-Account.hasMany(Binder, {
+User.hasMany(Binder, {
   foreignKey: "account_id",
   onDelete: "CASCADE",
 });
 
-Binder.belongsTo(Account, {
+Binder.belongsTo(User, {
   foreignKey: "account_id",
 });
 
@@ -65,4 +65,4 @@ Card.belongsTo(Pokemon, { foreignKey: "pokemon_id" });
 
 // Type.belongsToMany(Pokemon);
 
-module.exports = { Account, Card, Binder, Pokemon, Type, Inventory };
+module.exports = { User, Card, Binder, Pokemon, Type, Inventory };
