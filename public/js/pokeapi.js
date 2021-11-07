@@ -32,7 +32,7 @@ const getCard = async () => {
       if (currentPage > 1) {
         prevBtn.disabled = false;
       }
-      if (cardCount < 9) {
+      if (currentPage / pageTotal === 1) {
         nextBtn.disabled = true;
       } else {
         nextBtn.disabled = false;
