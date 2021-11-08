@@ -1,12 +1,10 @@
 const router = require("express").Router();
 
-// const apiRoutes = require("./api");
+const apiRoutes = require("./api");
 const homePage = require("./homepage");
 
 router.use("/", homePage);
-// router.use("/api", apiRoutes);
-
-
+router.use("/api", apiRoutes);
 
 router.get("*", async (req, res) => {
   try {
