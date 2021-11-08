@@ -2,20 +2,20 @@ const loginFormHandler = async (event) => {
   event.preventDefault();
   console.log("Calling login...");
 
-  const email = document.querySelector("#username").value.trim();
-  const password = document.querySelector("#password").value.trim();
+  const usernameEl = document.querySelector("#username").value.trim();
+  const passwordEl = document.querySelector("#password").value.trim();
 
-  if (email && password) {
+  if (usernameEl && passwordEl) {
     const response = await fetch("/api/users/login", {
       method: "POST",
-      body: JSON.stringify({ email, password }),
+      body: JSON.stringify({ user_name: usernameEl, password: passwordEl }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/dashboard");
     } else {
-      alert(response);
+      alert(response.status);
     }
   }
 };

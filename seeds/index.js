@@ -11,7 +11,10 @@ const binderSeedData = require("./binderSeedData.json");
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
 
-  const users = await User.bulkCreate(userSeedData);
+  const users = await User.bulkCreate(userSeedData, {
+    individualHooks: true,
+    returning: true,
+  });
   const binders = await Binder.bulkCreate(binderSeedData);
   const inventory = await Inventory.bulkCreate(InventorySeedData);
   const pokemon = await Pokemon.bulkCreate(pokemonSeedData);
