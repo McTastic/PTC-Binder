@@ -19,8 +19,8 @@ Binder.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: "account",
-        key: "account_id",
+        model: "user",
+        key: "user_id",
       },
     },
   },
