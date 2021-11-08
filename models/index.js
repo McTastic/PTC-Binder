@@ -1,4 +1,4 @@
-const User = require("./user");
+const User = require("./User");
 const Card = require("./cards");
 const Binder = require("./binder");
 const Pokemon = require("./pokemon");
