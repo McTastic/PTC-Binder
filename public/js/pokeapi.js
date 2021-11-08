@@ -21,8 +21,7 @@ const getCard = async () => {
       }
     );
     const result = await response.json();
-    let cardCount = result.data.length;
-    let pageTotal = Math.ceil(result.totalCount / cardCount);
+    let pageTotal = Math.ceil(result.totalCount / result.pageSize);
     // Loops through results and returns the desired number of cards
     for (let i = 0; i < result.data.length; i++) {
       cardEl.innerHTML += `<img src ="${result.data[i].images.small}"/>`;
