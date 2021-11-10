@@ -9,10 +9,15 @@ router.get("/", async (req, res) => {
 });
 router.get("/dashboard", async (req, res) => {
   try {
-    res.render("dashboard", {});
+    res.render("dashboard", {
+      modal: {
+        title: "mySuperFun Title",
+        body: "body",
+      },
+    });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-module.exports=router;
+module.exports = router;

@@ -9,7 +9,7 @@ const getCard = async () => {
   let userInput = document.querySelector("#pokemon-name").value;
   let cardEl = document.querySelector(".pokemonCard");
   let currentPageEl = document.querySelector(".pageCount");
-  // const apiKey = process.env("X_API_KEY"); 
+  // const apiKey = process.env("X_API_KEY");
   cardEl.innerHTML = "";
   try {
     const response = await fetch(
