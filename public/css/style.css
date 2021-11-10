@@ -24,7 +24,7 @@ main {
 }
 
 #logo {
-  background-image: url(./public/assets/images/main-logo.webp);
+  background-image: url(../assets/images/main-logo.webp);
   background-size: 180px;
   background-repeat: no-repeat;
   background-position: center;
