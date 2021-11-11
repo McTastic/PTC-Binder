@@ -26,6 +26,14 @@ Card.init(
         key: "pokemon_id",
       },
     },
+    card_api_id: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    card_img_url: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     sequelize,
