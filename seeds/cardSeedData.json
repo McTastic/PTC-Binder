@@ -2,16 +2,22 @@
   {
     "card_name": "holographic charizard",
     "description": "fancy card",
-    "pokemon_id": 2
+    "pokemon_id": 2,
+    "card_img_url": "https://www.google.com/aclk?sa=L&ai=DChcSEwjcvezby4_0AhWObG8EHepECwwYABABGgJqZg&sig=AOD64_1zD7iYaWL5UsTc98tivU_49KNEug&adurl&ctype=5&ved=2ahUKEwjIq-Dby4_0AhXUBc0KHWRnDb0Qvhd6BAgBEFo",
+    "card_api_id": "card1"
   },
   {
     "card_name": "holographic squirtle",
     "description": "shiny card",
-    "pokemon_id": 3
+    "pokemon_id": 3,
+    "card_img_url": "https://www.google.com/aclk?sa=L&ai=DChcSEwjcvezby4_0AhWObG8EHepECwwYABABGgJqZg&sig=AOD64_1zD7iYaWL5UsTc98tivU_49KNEug&adurl&ctype=5&ved=2ahUKEwjIq-Dby4_0AhXUBc0KHWRnDb0Qvhd6BAgBEFo",
+    "card_api_id": "card1"
   },
   {
     "card_name": "super pikachu",
     "description": "mint condition",
-    "pokemon_id": 1
+    "pokemon_id": 1,
+    "card_img_url": "https://www.google.com/aclk?sa=L&ai=DChcSEwjcvezby4_0AhWObG8EHepECwwYABABGgJqZg&sig=AOD64_1zD7iYaWL5UsTc98tivU_49KNEug&adurl&ctype=5&ved=2ahUKEwjIq-Dby4_0AhXUBc0KHWRnDb0Qvhd6BAgBEFo",
+    "card_api_id": "card1"
   }
 ]
