@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User } = require("../../models");
+const { User, Binder, Card } = require("../../models");
 
 // Create a new user
 router.post("/", async (req, res) => {
@@ -63,4 +63,21 @@ router.post("/logout", (req, res) => {
   }
 });
 
+router.get("/binders/:userid", async (req, res) => {
+  try {
+    const binderData = await User.findByPk(req.params.userid, {
+      include: [
+        {
+          model: Binder,
+          include: [Card],
+        },
+      ],
+    });
+
+    res.status(200).json(binderData);
+  } catch (err) {
+    res.status(400).json(err);
+  }
+});
+module.exports = router;
 module.exports = router;

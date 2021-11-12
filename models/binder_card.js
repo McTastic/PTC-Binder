@@ -10,20 +10,20 @@ BinderCard.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    binder_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "binder",
-        key: "binder_id",
-      },
-    },
-    card_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: "card",
-        key: "card_id",
-      },
-    },
+    // binder_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "binder",
+    //     key: "binder_id",
+    //   },
+    // },
+    // card_id: {
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "card",
+    //     key: "card_id",
+    //   },
+    // },
   },
   {
     sequelize,
