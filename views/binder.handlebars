@@ -1,35 +1,17 @@
 <body>
   <main>
     <div class="page">
-      {{! Call cards dynamically to binder page once added from search, etc. }}
-      {{! Call like modal from main? }}
-      {{! TODO: Add binder route }}
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card
-            title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card
-            title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div>
-      <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="..." />
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card
-            title and make up the bulk of the card's content.</p>
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
+      <div class="card-group justify-content-evenly">
+        {{#each cards}}
+          <div class="card" style="min-width: 12rem; flex-grow: 0;">
+            <img src={{card_img_url}} class="card-img-top" alt={{card_name}} />
+            <div class="card-body">
+              <h5 class="card-title">{{card_name}}</h5>
+              <p class="card-text">{{description}}</p>
+              {{! <a href="#" class="btn btn-primary">Go somewhere</a> }}
+            </div>
+          </div>
+        {{/each}}
       </div>
     </div>
   </main>
