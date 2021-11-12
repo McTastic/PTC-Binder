@@ -15,14 +15,14 @@ Binder.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    account_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "user",
-        key: "user_id",
-      },
-    },
+    // account_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: "user",
+    //     key: "user_id",
+    //   },
+    // },
   },
   {
     sequelize,
