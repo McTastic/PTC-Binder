@@ -1,7 +1,3 @@
-$(document).ready(function () {
-  $(".modal").modal();
-});
-
 const getCard = async (pokeID) => {
   const modalCardEl = document.querySelector(".modalCard");
   const pokeModalName = document.querySelector(".pokeModalName");
@@ -42,8 +38,8 @@ const getCard = async (pokeID) => {
 };
 
 $("body").on("click", ".cards", function () {
-  $(".modal-trigger").modal();
   event.preventDefault();
   const pokeID = this.id;
   getCard(pokeID);
+  $("#myModal").modal("show");
 });

@@ -3,6 +3,8 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   text-decoration: none;
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
 }
 
 /* Remove the navbar's default rounded borders and increase the bottom margin */
@@ -10,7 +12,6 @@
   margin-bottom: 1rem;
   border-radius: 0;
 }
-
 .jumbotron {
   padding: 2rem 1rem;
   position: relative;
@@ -25,6 +26,7 @@
   height: 100%;
   background: red;
   border-radius: 50% 50% 0 0/100% 100% 0 0;
+  box-shadow: 0 0 5px 5px;
 }
 
 .circle {
@@ -68,12 +70,45 @@ main {
   position: relative;
 }
 
-#search > input {
+/* #search > input {
   max-width: 50%;
-}
+} */
 
 /* Add a gray background color and some padding to the footer */
 footer {
-  background-color: #961d1d;
+  background-color: #cccccc;
+  height: 10vh;
   padding: 25px;
+}
+.searchPageContent {
+  display: inline-flex;
+}
+.searchPageLeft {
+  display: flex;
+  flex-direction: column;
+}
+.pokemonCard {
+}
+.cards {
+  height: 20em;
+  width: 14em;
+  margin: 1em;
+}
+.form-control {
+  width: 20em;
+}
+.pageAndButtons {
+}
+.pokeModal {
+  height: 30em;
+  width: 21em;
+  margin: 2em;
+}
+.pokeModalName {
+  margin-left: 3em;
+}
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
