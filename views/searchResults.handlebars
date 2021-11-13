@@ -1,0 +1,55 @@
+<body>
+  <h3>Who's that Pokemon!?</h3>
+  <div class="searchPageContent">
+    <div class="searchPageLeft">
+      <form>
+        <div class="mb-3">
+          <label for="Pokemon-Name" class="form-label"></label>
+          <input
+            type="text"
+            class="form-control"
+            id="pokemon-name"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text">Enter a Pokemon Name</div>
+        </div>
+        <button
+          type="submit"
+          class="btn btn-primary"
+          id="search-submit"
+        >Submit</button>
+      </form>
+      <div class="pageAndButtons">
+        <div class="pageCount"></div>
+        <button class="prev">Prev</button>
+        <button class="next">Next</button>
+      </div>
+    </div>
+
+    <div class="pokemonCard"></div>
+  </div>
+  <!-- Modal Structure -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content">
+        <div class="row valign-wrapper">
+          <div class="modalCard col"></div>
+          <div class="cardInfo col">
+            <h2 class="pokeModalName"></h2>
+            <div class="cardDailyAvg">Average Price Today</div>
+            <div class="cardWeeklyAvg">Average Price This Week</div>
+            <div class="cardMonthlyAvg">Average Price This Month</div>
+            <div class="cardFlavorText">Card Flavor Text</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script
+    type="text/javascript"
+    src="https://code.jquery.com/jquery-2.1.1.min.js"
+  ></script>
+  <script src="js/pokeapi.js"></script>
+  <script src="js/pokeapi2.js"></script>
+</body>
