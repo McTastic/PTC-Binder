@@ -65,7 +65,7 @@ router.post("/logout", (req, res) => {
 
 router.get("/binders/:userid", async (req, res) => {
   try {
-    const binderData = await User.findByPk(req.params.userid, {
+    const binderData = await User.findByPk(req.params.user_id, {
       include: [
         {
           model: Binder,
@@ -79,5 +79,5 @@ router.get("/binders/:userid", async (req, res) => {
     res.status(400).json(err);
   }
 });
-module.exports = router;
+
 module.exports = router;
