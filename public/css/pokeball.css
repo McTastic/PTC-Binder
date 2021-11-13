@@ -10,7 +10,7 @@ body {
 }
 .center-on-page {
   position: absolute;
-  top: 50%;
+  top: 120px;
   left: 50%;
   transform: translate(-50%, -50%);
 }
