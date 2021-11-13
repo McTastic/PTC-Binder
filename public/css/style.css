@@ -5,6 +5,120 @@
   text-decoration: none;
 }
 
+#logo {
+  background-image: url(../assets/images/main-logo.webp);
+  background-size: 180px;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: auto;
+  height: 210px;
+  z-index: 100; /* :( */
+  position: relative;
+  padding: 1rem;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body {
+  background: #ecf0f1;
+}
+.center-on-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* Poké Styles */
+.pokeball {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  background: #fff;
+  border: 10px solid #000;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: inset -10px 10px 0 10px #ccc;
+  animation: fall 0.25s ease-in-out,
+    shake 1.25s cubic-bezier(0.36, 0.07, 0.19, 0.97) 3;
+}
+.pokeball::before,
+.pokeball::after {
+  content: "";
+  position: absolute;
+}
+.pokeball::before {
+  background: red;
+  width: 100%;
+  height: 50%;
+}
+.pokeball::after {
+  top: calc(50% - 10px);
+  width: 100%;
+  height: 20px;
+  background: #000;
+}
+.pokeball__button {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  width: 60px;
+  height: 60px;
+  background: #7f8c8d;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 0 0 10px black;
+  animation: blink 0.5s alternate 7;
+}
+/* Animation */
+@keyframes blink {
+  from {
+    background: #eee;
+  }
+  to {
+    background: #e74c3c;
+  }
+}
+@keyframes shake {
+  0 {
+    transform: translate(0, 0) rotate(0);
+  }
+  20% {
+    transform: translate(-10px, 0) rotate(-20deg);
+  }
+  30% {
+    transform: translate(10px, 0) rotate(20deg);
+  }
+  50% {
+    transform: translate(-10px, 0) rotate(-10deg);
+  }
+  60% {
+    transform: translate(10px, 0) rotate(10deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0);
+  }
+}
+@keyframes fall {
+  0% {
+    top: -200px;
+  }
+  60% {
+    top: 0;
+  }
+  80% {
+    top: -20px;
+  }
+  100% {
+    top: 0;
+  }
+}
+
 /* Remove the navbar's default rounded borders and increase the bottom margin */
 .navbar {
   margin-bottom: 1rem;
@@ -13,59 +127,11 @@
 
 .jumbotron {
   padding: 2rem 1rem;
-  position: relative;
-  width: 100%;
-  height: 20vh;
-  display: flex;
-  overflow: hidden;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: red;
-  border-radius: 50% 50% 0 0/100% 100% 0 0;
 }
-
-.circle {
-  width: 100px;
-  height: 100px;
-  background: black;
-  border-radius: 50%;
-  position: relative;
-  top: 100px;
-  left: 555px;
-}
-
-/* .pokeball {
-  position: relative;
-  margin: 0 auto;
-  max-width: 900px;
-  text-align: center;
-} */
-
-/* .pokeball h1 {
-  margin: 0;
-  padding: 0;
-  color: yellow;
-  font-size: 3em;
-  justify-content: space-around;
-} */
 
 main {
   /* subtracting from px of jumbotron, nav & footer */
   min-height: calc(100vh - 342px);
-}
-
-#logo {
-  background-image: url(../assets/images/main-logo.webp);
-  background-size: 180px;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: auto;
-  height: 160px;
-  z-index: 1;
-  position: relative;
 }
 
 #search > input {
@@ -74,6 +140,6 @@ main {
 
 /* Add a gray background color and some padding to the footer */
 footer {
-  background-color: #961d1d;
+  background-color: lightgray;
   padding: 25px;
 }
