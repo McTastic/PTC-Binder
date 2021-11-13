@@ -18,15 +18,4 @@ router.get("/", async (req, res) => {
 //   include: [{ model: Binder }],
 // });
 
-// const user = userData.get({ plain: true });
-//     console.log("**************************", user);
-//     res.render("dashboard", {
-//       ...user,
-//       logged_in: true,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 module.exports = router;
