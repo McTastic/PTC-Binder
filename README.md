@@ -3,6 +3,7 @@
     Created by Ben Wofford, Brittneylynn Crosby, Sean McCarthy, Steven Sosebee
 
 A user friendly application for searching and buying Pokemon cards.
+
 - User can search for any Pokemon and all cards for that character will appear!
 - User can click on a card and view current dynamically loaded information.
 - User can login/create account.
