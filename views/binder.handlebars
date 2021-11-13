@@ -1,19 +1,17 @@
-<body>
-  <main>
-    <div class="page">
-      <div class="card-group justify-content-evenly">
-        {{#each cards}}
-          <div class="card" style="min-width: 12rem; flex-grow: 0;">
-            <img src={{card_img_url}} class="card-img-top" alt={{card_name}} />
-            <div class="card-body">
-              <h5 class="card-title">{{card_name}}</h5>
-              <p class="card-text">{{description}}</p>
-              {{! <a href="#" class="btn btn-primary">Go somewhere</a> }}
-            </div>
+<main>
+  <div class="page">
+    <div class="card-group justify-content-evenly">
+      {{#each cards}}
+        <div class="card" style="min-width: 12rem; flex-grow: 0;">
+          <img src={{card_img_url}} class="card-img-top" alt={{card_name}} />
+          <div class="card-body">
+            <h5 class="card-title">{{card_name}}</h5>
+            <p class="card-text">{{description}}</p>
+            {{! <a href="#" class="btn btn-primary">Go somewhere</a> }}
           </div>
-        {{/each}}
-      </div>
+        </div>
+      {{/each}}
     </div>
-  </main>
-  <script src="js/dbActions.js"></script>
-</body>
+  </div>
+</main>
+<script src="js/dbActions.js"></script>
