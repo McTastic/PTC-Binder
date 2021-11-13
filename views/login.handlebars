@@ -1,36 +1,56 @@
-<body>
-    <!-- Login/Signup -->
-    <section class="showcase">
-        <div class="container grid">
-            <div class="showcase-text">
-            </div>
-            <form id="login-form" action="submit">
-                <fieldset>
-                    <legend>
-                        User Account
-                    </legend>
-                    <div>
-                        <label for="username">Username</label>
-                        <input id="username" type="text" name="username" placeholder="Eg. John Doe" required />
-                    </div>
-                    <div>
-                        <label for="password">Password</label>
-                        <input id="password" type="password" name="password" placeholder="Password" required />
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <span>
-                        <input id="login" type="radio" name="login_type" value="login">
-                        <label for="login">Login</label>
-                        <input id="sign up" type="radio" name="login_type" value="sign up">
-                        <label for="sign up">Sign Up</label>
-                    </span>
-                </fieldset>
-                <input type="submit" id="inputbtn" value="Submit" />
-                <output name="result"></output>
-            </form>
-    </section>
+<!-- Login/Signup -->
+<div class="card p-2 text-center login-card w-75 mx-auto">
+  <div class="col-md-8 mx-auto">
+    <h2>Login</h2>
+        <form id="login-form">
+      <div class="form-group row m-1">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
+        <div class="col-sm-10">
+          <input type="username" class="form-control" id="username-login" value="" />
+        </div>
+      </div>
+      <div class="form-group row m-1">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="password-login" placeholder="" />
+        </div>
+      </div>
+      <button class="submit btn btn-danger" type="submit">Submit</button>
+    </form>
+      <h2>Signup</h2>
+    <form class="signup-form">
+      {{!-- <div class="form-group row m-auto">
+        <label for="inputFirstName" class="col-sm-2 col-form-label">First Name</label>
+        <div class="col-sm-10">
+          <input type="firstName" class="form-control" id="firstName-input-signup" placeholder="" />
+        </div>
+      </div>
+      <div class="form-group row m-1">
+        <label for="inputLastName" class="col-sm-2 col-form-label">Last Name</label>
+        <div class="col-sm-10">
+          <input type="lastName" class="form-control" id="LastName-input-signup" placeholder="" />
+        </div>
+      </div> --}}
+      <div class="form-group row m-1">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Username</label>
+        <div class="col-sm-10">
+          <input type="username" class="form-control" id="username-signup" value="" />
+        </div>
+      </div>
+      <div class="form-group row m-1">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="email" class="form-control" id="email-signup" value="" />
+        </div>
+      </div>
+      <div class="form-group row m-1">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="password-signup" placeholder="" />
+        </div>
+      </div>
+      <button class="submit btn btn-danger" type="submit">Submit</button>
+    </form>
+  </div>
 
-</body>
 <script src="./js/login.js"></script>
-</html>

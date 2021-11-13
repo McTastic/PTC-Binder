@@ -3,6 +3,8 @@
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   text-decoration: none;
+  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
 }
 
 #logo {
@@ -22,7 +24,6 @@
   margin-bottom: 1rem;
   border-radius: 0;
 }
-
 .jumbotron {
   padding: 2rem 1rem;
 }
@@ -32,12 +33,39 @@ main {
   min-height: calc(100vh - 342px);
 }
 
-#search > input {
-  max-width: 50%;
-}
-
 /* Add a gray background color and some padding to the footer */
 footer {
-  background-color: lightgray;
   padding: 25px;
+}
+.searchPageContent {
+  display: inline-flex;
+}
+.searchPageLeft {
+  display: flex;
+  flex-direction: column;
+}
+.pokemonCard {
+}
+.cards {
+  height: 20em;
+  width: 14em;
+  margin: 1em;
+}
+.nameInput {
+  width: 20em;
+}
+.pageAndButtons {
+}
+.pokeModal {
+  height: 30em;
+  width: 21em;
+  margin: 2em;
+}
+.pokeModalName {
+  margin-left: 3em;
+}
+.cardInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

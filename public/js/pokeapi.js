@@ -5,15 +5,13 @@ const nextBtn = document.querySelector(".next");
 let currentPage = 1;
 
 //*Function to get pokemon card data. Change name of pokemon to get a different result. Change pagesize= and a number to get a different number of results (can become a variable later too if we want)
-const getCard = async () => {
-  let userInput = document.querySelector("#pokemon-name").value;
-  let cardEl = document.querySelector(".pokemonCard");
+const getCards = async () => {
   let currentPageEl = document.querySelector(".pageCount");
   // const apiKey = process.env("X_API_KEY");
-  cardEl.innerHTML = "";
+  let userInput = document.querySelector("#pokemon-name").value;
   try {
     const response = await fetch(
-      `https://api.pokemontcg.io/v2/cards/?q=name:${userInput}&page=${currentPage}&pageSize=9`,
+      `https://api.pokemontcg.io/v2/cards/?q=name:${userInput}&page=${currentPage}&pageSize=10`,
       {
         method: "GET",
         //TODO use variable once server is up and running
@@ -21,10 +19,12 @@ const getCard = async () => {
       }
     );
     const result = await response.json();
+    let cardEl = document.querySelector(".pokemonCard");
     let pageTotal = Math.ceil(result.totalCount / result.pageSize);
+    cardEl.innerHTML = "";
     // Loops through results and returns the desired number of cards
     for (let i = 0; i < result.data.length; i++) {
-      cardEl.innerHTML += `<img src ="${result.data[i].images.small}"/>`;
+      cardEl.innerHTML += `<a data-toggle="modal" href="#${result.data[i].id}" class="modal-trigger"><img class="cards" id="${result.data[i].id}" src ="${result.data[i].images.small}"/></a>`;
       if (currentPage === 1) {
         prevBtn.disabled = true;
       }
@@ -46,18 +46,18 @@ const getCard = async () => {
   }
 };
 
-searchBtn.addEventListener("click", function () {
+searchBtn.addEventListener("click", function (event) {
   event.preventDefault();
-  getCard();
+  getCards();
 });
 
 nextBtn.addEventListener("click", function () {
   event.preventDefault();
   currentPage++;
-  getCard();
+  getCards();
 });
 prevBtn.addEventListener("click", function () {
   event.preventDefault();
   currentPage--;
-  getCard();
+  getCards();
 });

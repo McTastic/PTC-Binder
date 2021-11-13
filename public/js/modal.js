@@ -1,6 +1,6 @@
-var myModal = document.getElementById("staticBackdrop");
-var myInput = document.getElementById("myInput");
+// var myModal = document.getElementById("staticBackdrop");
+// var myInput = document.getElementById("myInput");
 
-myModal.addEventListener("shown.bs.modal", function () {
-  myInput.focus();
-});
+// myModal.addEventListener("show.bs.modal", function () {
+//   myInput.focus();
+// });
