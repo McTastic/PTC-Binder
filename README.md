@@ -2,7 +2,12 @@
 
     Created by Ben Wofford, Brittneylynn Crosby, Sean McCarthy, Steven Sosebee
 
-Add in what this app is about.
+A user friendly application for searching and buying Pokemon cards.
+- User can search for any Pokemon and all cards for that character will appear!
+- User can click on a card and view current dynamically loaded information.
+- User can login/create account.
+- Account user can add cards to a wishlist, or add to cart for purchasing!
+
 
 ## Table of Contents
 
@@ -19,11 +24,11 @@ Add in what this app is about.
 
 ## Features
 
--
--
--
--
--
+-User Accounts
+-Seach Engine
+-Dynamically loaded information
+-Wishlist
+-Purchasing power!
 
 ## Repository
 
