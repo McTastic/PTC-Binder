@@ -24,11 +24,11 @@ A user friendly application for searching and buying Pokemon cards.
 
 ## Features
 
--User Accounts
--Seach Engine
--Dynamically loaded information
--Wishlist
--Purchasing power!
+- User Accounts
+- Seach Engine
+- Dynamically loaded information
+- Wishlist
+- Purchasing power!
 
 ## Repository
 
