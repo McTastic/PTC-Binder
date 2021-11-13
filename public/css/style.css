@@ -20,16 +20,18 @@
 
 /* Remove the navbar's default rounded borders and increase the bottom margin */
 .navbar {
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   border-radius: 0;
 }
 .jumbotron {
   padding: 2rem 1rem;
+  background-image: linear-gradient(to bottom right, midnightblue, lightgrey);
 }
 
 main {
   /* subtracting from px of jumbotron, nav & footer */
   min-height: calc(100vh - 342px);
+  background-image: linear-gradient(to bottom right, midnightblue, lightgrey);
 }
 
 /* Add a gray background color and some padding to the footer */
