@@ -27,6 +27,9 @@
   padding: 2rem 1rem;
   background-image: linear-gradient(to bottom right, midnightblue, lightgrey);
 }
+#logout {
+  cursor: pointer;
+}
 
 main {
   /* subtracting from px of jumbotron, nav & footer */
