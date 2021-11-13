@@ -48,7 +48,6 @@ nav li {
 main {
   /* subtracting from px of jumbotron, nav & footer */
   min-height: calc(100vh - 342px);
-  background-image: linear-gradient(to bottom right, midnightblue, lightgrey);
 }
 
 /* Add a gray background color and some padding to the footer */
