@@ -5,9 +5,14 @@ const { User, Binder, BinderCard, Card } = require("../../models");
 // Create a new binder
 router.post("/new", async (req, res) => {
   try {
-    if (session.user_id) {
-      req.user_id = session.user_id;
+    console.log(req.session.user_id);
+    if (req.session.logged_in) {
+      console.log(req.session);
+      req.body.user_id = req.session.user_id;
+    } else {
+      res.redirect("/login");
     }
+    console.log(req);
     const binderData = await Binder.create(req.body);
 
     res.status(200).json(binderData);
