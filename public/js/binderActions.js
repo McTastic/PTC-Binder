@@ -1,5 +1,3 @@
-// const session = require("express-session");
-
 const addStoreItem = async (event) => {
   event.preventDefault();
   const response = await fetch("/api/inventory/addinventory", {

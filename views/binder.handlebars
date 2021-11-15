@@ -1,7 +1,7 @@
 <main>
   <div class="page">
     <div class="card-group justify-content-evenly">
-      {{#each cards}}
+      {{#each cards as |card|}}
         <div class="card" style="min-width: 12rem; flex-grow: 0;">
           <img src={{card_img_url}} class="card-img-top" alt={{card_name}} />
           <div class="card-body">
@@ -14,4 +14,4 @@
     </div>
   </div>
 </main>
-<script src="js/dbActions.js"></script>
+<script src="js/binderActions.js"></script>
