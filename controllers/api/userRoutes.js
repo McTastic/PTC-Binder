@@ -41,13 +41,21 @@ router.post("/login", async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.user_id;
       req.session.logged_in = true;
-      console.log(req.session);
-      res.json({
-        user: userData,
-        message: "You are now logged in!",
-        session: req.session,
+      // console.log(req.session);
+      // res.json({
+      //   user: userData,
+      //   message: "You are now logged in!",
+      //   session: req.session,
+      // });
+      res.render("userPage", {
+        logged_in: true,
       });
     });
+
+    // console.log("User is logged in...");
+    // res.render("dashboard", {
+    //   logged_in: req.session.logged_in,
+    // });
   } catch (err) {
     res.status(400).json(err);
   }
@@ -73,15 +81,22 @@ router.get("/binders", async (req, res) => {
       //   },
       // ],
     );
-    console.log(binderData);
-    console.log("Retrieving plain data...");
-    const binders = binderData.map((binder) => binder.get({ plain: true }));
-    // console.log("Plain data...");
-    // console.log(binders);
-
-    res.render("userPage", {
-      binders,
-    });
+    if (binderData.length > 1) {
+      console.log(binderData);
+      console.log("Retrieving plain data...");
+      const binders = binderData.map((binder) => binder.get({ plain: true }));
+      // console.log("Plain data...");
+      // console.log(binders);
+      res.status(200).json(binders);
+      // res.render("userPage", {
+      //   binders,
+      //   logged_in: req.session.logged_in,
+      // });
+    } else {
+      res.render("login", {
+        logged_in: req.session.logged_in,
+      });
+    }
 
     // res.status(200).json(binderData);
   } catch (err) {
