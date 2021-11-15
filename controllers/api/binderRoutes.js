@@ -13,7 +13,8 @@ router.post("/new", async (req, res) => {
     }
     const binderData = await Binder.create(req.body);
 
-    res.status(200).json(binderData);
+    // res.status(200).json(binderData);
+    res.status(200).render("userPage", { logged_in: req.session.logged_in });
   } catch (err) {
     res.status(400).json(err);
   }
@@ -93,9 +94,10 @@ router.get("/get/:binderid", async (req, res) => {
     const cards = binderData.dataValues.cards.map((data) =>
       data.get({ plain: true })
     );
-    console.log(cards);
+    // console.log(cards);
     res.render("binder", {
       cards,
+      logged_in: req.session.user_id,
     });
 
     // res.status(200).json(binderData);

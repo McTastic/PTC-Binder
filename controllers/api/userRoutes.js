@@ -9,8 +9,17 @@ router.post("/", async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.user_id;
       req.session.logged_in = true;
-
-      res.status(200).json(userData);
+      // console.log(req.session);
+      // res.json({
+      //   user: userData,
+      //   message: "You are now logged in!",
+      //   session: req.session,
+      // });
+      res
+        .render("dashboard", {
+          logged_in: true,
+        })
+        .status(200);
     });
   } catch (err) {
     res.status(400).json(err);
@@ -20,6 +29,11 @@ router.post("/", async (req, res) => {
 // Login as an existing user
 router.post("/login", async (req, res) => {
   try {
+    let scripts = [
+      { src: "/js/logout.js" },
+      { src: "/js/index.js" },
+      { src: "/js/binderActions.js" },
+    ];
     const userData = await User.findOne({
       where: { user_name: req.body.user_name },
     });
@@ -47,9 +61,11 @@ router.post("/login", async (req, res) => {
       //   message: "You are now logged in!",
       //   session: req.session,
       // });
-      res.render("userPage", {
+      res.render("dashboard", {
         logged_in: true,
+        scripts,
       });
+      res.status(200);
     });
 
     // console.log("User is logged in...");
@@ -73,6 +89,11 @@ router.post("/logout", (req, res) => {
 
 router.get("/binders", async (req, res) => {
   try {
+    let scripts = [
+      { src: "/js/login.js" },
+      { src: "/js/index.js" },
+      { src: "/js/binderActions.js" },
+    ];
     const binderData = await Binder.findAll(
       { where: { user_id: req.session.user_id } }
       // include: [
@@ -95,6 +116,7 @@ router.get("/binders", async (req, res) => {
     } else {
       res.render("login", {
         logged_in: req.session.logged_in,
+        scripts,
       });
     }
 

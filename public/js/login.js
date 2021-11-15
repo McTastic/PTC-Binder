@@ -12,13 +12,14 @@ const loginFormHandler = async (event) => {
       headers: { "Content-Type": "application/json" },
     });
     console.log(response);
-    console.log("User logged in...");
-    // if (!response.ok) {
-    document.location.replace("/");
-    // localStorage.setItem("userName", user_name);
-    // } else {
-    //   alert(response.status);
-    // }
+    // console.log("User logged in...");
+    if (response.ok) {
+      alert("Go catch 'em all...");
+      // document.location.replace("/");
+      // localStorage.setItem("userName", user_name);
+    } else {
+      alert("Username or password were incorrect...");
+    }
   }
 };
 

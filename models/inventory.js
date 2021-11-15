@@ -34,14 +34,14 @@ Inventory.init(
     //     key: "card_id",
     //   },
     // },
-    binder_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: "binder",
-        key: "binder_id",
-      },
-    },
+    // binder_id: {
+    //   type: DataTypes.INTEGER,
+    //   allowNull: false,
+    //   references: {
+    //     model: "binder",
+    //     key: "binder_id",
+    //   },
+    // },
   },
   {
     sequelize,
