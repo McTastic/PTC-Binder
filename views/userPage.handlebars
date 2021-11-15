@@ -1,3 +1,7 @@
 <input id="binderName"></input>
 <button id="addBinder">Add binder</button>
-<script src="js/dbActions.js"></script>
+{{#each binders as |binder|}}
+{{> binders-details}}
+{{/each}}
+
+<script src="js/binderActions.js"></script>

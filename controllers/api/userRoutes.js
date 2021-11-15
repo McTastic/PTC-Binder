@@ -63,18 +63,27 @@ router.post("/logout", (req, res) => {
   }
 });
 
-router.get("/binders/:userid", async (req, res) => {
+router.get("/binders", async (req, res) => {
   try {
-    const binderData = await User.findByPk(req.params.user_id, {
-      include: [
-        {
-          model: Binder,
-          include: [Card],
-        },
-      ],
+    const binderData = await Binder.findAll(
+      { where: { user_id: req.session.user_id } }
+      // include: [
+      //   {
+      //     model: Card,
+      //   },
+      // ],
+    );
+    console.log(binderData);
+    console.log("Retrieving plain data...");
+    const binders = binderData.map((binder) => binder.get({ plain: true }));
+    // console.log("Plain data...");
+    // console.log(binders);
+
+    res.render("userPage", {
+      binders,
     });
 
-    res.status(200).json(binderData);
+    // res.status(200).json(binderData);
   } catch (err) {
     res.status(400).json(err);
   }
