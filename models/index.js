@@ -16,22 +16,22 @@ Binder.belongsTo(User, {
   foreignKey: "user_id",
 });
 
-Binder.hasMany(Inventory, {
-  foreignKey: "binder_id",
-  onDelete: "CASCADE",
-});
+// Binder.hasMany(Inventory, {
+//   foreignKey: "binder_id",
+//   onDelete: "CASCADE",
+// });
 
-Inventory.belongsTo(Binder, {
-  foreignKey: "binder_id",
-});
+// Inventory.belongsTo(Binder, {
+//   foreignKey: "binder_id",
+// });
 
-Inventory.hasMany(Card, {
+Inventory.hasOne(Card, {
   foreignKey: "card_id",
 });
 
-Card.belongsTo(Inventory, {
-  foreignKey: "card_id",
-});
+// Card.belongsToMany(Inventory, {
+//   foreignKey: "card_id",
+// });
 
 // Creates a many-to-many relationship through the mapping table binder_card
 Binder.belongsToMany(Card, {

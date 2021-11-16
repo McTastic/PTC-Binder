@@ -4,14 +4,33 @@ const { User, Binder, Card } = require("../../models");
 // Create a new user
 router.post("/", async (req, res) => {
   try {
+    let scripts = [
+      { src: "/js/logout.js" },
+      { src: "/js/index.js" },
+      { src: "/js/binderActions.js" },
+    ];
     const userData = await User.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = userData.user_id;
       req.session.logged_in = true;
-
-      res.status(200).json(userData);
+      // console.log(req.session);
+      // res.json({
+      //   user: userData,
+      //   message: "You are now logged in!",
+      //   session: req.session,
+      // });
+      res.status(200);
+      res.render("dashboard", {
+        logged_in: true,
+        scripts,
+      });
     });
+    // res
+    //   .render("dashboard", {
+    //     logged_in: true,
+    //   })
+    //   .status(200);
   } catch (err) {
     res.status(400).json(err);
   }
@@ -20,6 +39,11 @@ router.post("/", async (req, res) => {
 // Login as an existing user
 router.post("/login", async (req, res) => {
   try {
+    let scripts = [
+      { src: "/js/logout.js" },
+      { src: "/js/index.js" },
+      { src: "/js/binderActions.js" },
+    ];
     const userData = await User.findOne({
       where: { user_name: req.body.user_name },
     });
@@ -41,13 +65,23 @@ router.post("/login", async (req, res) => {
     req.session.save(() => {
       req.session.user_id = userData.user_id;
       req.session.logged_in = true;
-      console.log(req.session);
-      res.json({
-        user: userData,
-        message: "You are now logged in!",
-        session: req.session,
+      // console.log(req.session);
+      // res.json({
+      //   user: userData,
+      //   message: "You are now logged in!",
+      //   session: req.session,
+      // });
+      res.render("dashboard", {
+        logged_in: true,
+        scripts,
       });
+      res.status(200);
     });
+
+    // console.log("User is logged in...");
+    // res.render("dashboard", {
+    //   logged_in: req.session.logged_in,
+    // });
   } catch (err) {
     res.status(400).json(err);
   }
@@ -65,6 +99,11 @@ router.post("/logout", (req, res) => {
 
 router.get("/binders", async (req, res) => {
   try {
+    let scripts = [
+      { src: "/js/login.js" },
+      { src: "/js/index.js" },
+      { src: "/js/binderActions.js" },
+    ];
     const binderData = await Binder.findAll(
       { where: { user_id: req.session.user_id } }
       // include: [
@@ -73,15 +112,23 @@ router.get("/binders", async (req, res) => {
       //   },
       // ],
     );
-    console.log(binderData);
-    console.log("Retrieving plain data...");
-    const binders = binderData.map((binder) => binder.get({ plain: true }));
-    // console.log("Plain data...");
-    // console.log(binders);
-
-    res.render("userPage", {
-      binders,
-    });
+    if (binderData.length > 1) {
+      console.log(binderData);
+      console.log("Retrieving plain data...");
+      const binders = binderData.map((binder) => binder.get({ plain: true }));
+      // console.log("Plain data...");
+      // console.log(binders);
+      res.status(200).json(binders);
+      // res.render("userPage", {
+      //   binders,
+      //   logged_in: req.session.logged_in,
+      // });
+    } else {
+      res.render("login", {
+        logged_in: req.session.logged_in,
+        scripts,
+      });
+    }
 
     // res.status(200).json(binderData);
   } catch (err) {

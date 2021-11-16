@@ -7,15 +7,14 @@ router.post("/new", async (req, res) => {
   try {
     console.log(req.session.user_id);
     if (req.session.logged_in) {
-      console.log(req.session);
       req.body.user_id = req.session.user_id;
     } else {
       res.redirect("/login");
     }
-    console.log(req);
     const binderData = await Binder.create(req.body);
 
-    res.status(200).json(binderData);
+    // res.status(200).json(binderData);
+    res.status(200).render("userPage", { logged_in: req.session.logged_in });
   } catch (err) {
     res.status(400).json(err);
   }
@@ -81,20 +80,27 @@ router.put("/rename/:id", async (req, res) => {
 
 router.get("/get/:binderid", async (req, res) => {
   try {
-    const binderData = await Binder.findAll({
+    const binderData = await Binder.findByPk(req.params.binderid, {
       include: [
         {
-          model: BinderCard,
-          attributes: ["card_id"],
-          include: [{ model: Card }],
+          model: Card,
         },
       ],
-      where: {
-        binder_id: req.params.binderid,
-      },
+      // where: {
+      //   binder_id: req.params.binderid,
+      // },
+    });
+    console.log(binderData.dataValues.cards);
+    const cards = binderData.dataValues.cards.map((data) =>
+      data.get({ plain: true })
+    );
+    // console.log(cards);
+    res.render("binder", {
+      cards,
+      logged_in: req.session.user_id,
     });
 
-    res.status(200).json(binderData);
+    // res.status(200).json(binderData);
   } catch (err) {
     res.status(400).json(err);
   }

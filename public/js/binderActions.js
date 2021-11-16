@@ -1,5 +1,3 @@
-// const session = require("express-session");
-
 const addStoreItem = async (event) => {
   event.preventDefault();
   const response = await fetch("/api/inventory/addinventory", {
@@ -17,6 +15,7 @@ const addStoreItem = async (event) => {
 
 const addBinder = async (event) => {
   event.preventDefault();
+  console.log("clicked....");
   let binderNameEl = document.getElementById("binderName").value;
   console.log(binderNameEl);
   const response = await fetch("/api/binder/new", {
