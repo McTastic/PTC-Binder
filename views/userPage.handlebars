@@ -1,7 +1,8 @@
-<input id="binderName"></input>
-<button id="addBinder">Add binder</button>
-{{#each binders as |binder|}}
+<div>
+    <div>{{>binder-add}}</div>
+<div class="container"> 
+    {{#each binders as |binder|}}
 {{> binders-details}}
 {{/each}}
-
-<script src="js/binderActions.js"></script>
+</div>
+</div>

@@ -1,23 +1,23 @@
 [
   {
-    "card_name": "holographic charizard",
-    "description": "fancy card",
+    "card_name": "Blastoise - Platinum",
+    "description": "mint condition",
     "pokemon_id": 2,
-    "card_img_url": "https://www.google.com/aclk?sa=L&ai=DChcSEwjcvezby4_0AhWObG8EHepECwwYABABGgJqZg&sig=AOD64_1zD7iYaWL5UsTc98tivU_49KNEug&adurl&ctype=5&ved=2ahUKEwjIq-Dby4_0AhXUBc0KHWRnDb0Qvhd6BAgBEFo",
-    "card_api_id": "card1"
+    "card_img_url": "https://images.pokemontcg.io/pl1/2.png",
+    "card_api_id": "pl1-2"
   },
   {
-    "card_name": "holographic squirtle",
-    "description": "shiny card",
+    "card_name": "Blaine's Charizard",
+    "description": "Still in the pack",
     "pokemon_id": 3,
-    "card_img_url": "https://www.google.com/aclk?sa=L&ai=DChcSEwjcvezby4_0AhWObG8EHepECwwYABABGgJqZg&sig=AOD64_1zD7iYaWL5UsTc98tivU_49KNEug&adurl&ctype=5&ved=2ahUKEwjIq-Dby4_0AhXUBc0KHWRnDb0Qvhd6BAgBEFo",
-    "card_api_id": "card1"
+    "card_img_url": "https://images.pokemontcg.io/gym2/2.png",
+    "card_api_id": "gym2-2"
   },
   {
     "card_name": "super pikachu",
     "description": "mint condition",
     "pokemon_id": 1,
-    "card_img_url": "https://www.google.com/aclk?sa=L&ai=DChcSEwjcvezby4_0AhWObG8EHepECwwYABABGgJqZg&sig=AOD64_1zD7iYaWL5UsTc98tivU_49KNEug&adurl&ctype=5&ved=2ahUKEwjIq-Dby4_0AhXUBc0KHWRnDb0Qvhd6BAgBEFo",
-    "card_api_id": "card1"
+    "card_img_url": "https://images.pokemontcg.io/basep/4.png",
+    "card_api_id": "basep-4"
   }
 ]
