@@ -19,9 +19,12 @@ A user friendly application for searching and buying Pokemon cards.
 
 ## Technology
 
-1.
-2.
-3.
+1. Green sock animation platform
+2. bcrypt
+3. Sequelize
+4. Express-handlebars
+5. Bootstrap
+6. mySQL2
 
 ## Features
 
