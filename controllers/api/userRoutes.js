@@ -5,8 +5,8 @@ const { User, Binder, Card } = require("../../models");
 router.post("/", async (req, res) => {
   try {
     let scripts = [
-      // { src: "/js/logout.js" },
-      // { src: "/js/index.js" },
+      { src: "/js/logout.js" },
+      { src: "/js/index.js" },
       { src: "/js/binderActions.js" },
     ];
     const userData = await User.create(req.body);
@@ -40,8 +40,8 @@ router.post("/", async (req, res) => {
 router.post("/login", async (req, res) => {
   try {
     let scripts = [
-      // { src: "/js/logout.js" },
-      // { src: "/js/index.js" },
+      { src: "/js/logout.js" },
+      { src: "/js/index.js" },
       { src: "/js/binderActions.js" },
     ];
     const userData = await User.findOne({
@@ -100,8 +100,8 @@ router.post("/logout", (req, res) => {
 router.get("/binders", async (req, res) => {
   try {
     let scripts = [
-      // { src: "/js/login.js" },
-      // { src: "/js/index.js" },
+      { src: "/js/login.js" },
+      { src: "/js/index.js" },
       { src: "/js/binderActions.js" },
     ];
     const binderData = await Binder.findAll(
