@@ -14,9 +14,8 @@ const loginFormHandler = async (event) => {
     console.log(response);
     // console.log("User logged in...");
     if (response.ok) {
-      alert("Go catch 'em all...");
-      // document.location.replace("/");
-      // localStorage.setItem("userName", user_name);
+      document.location.replace("/");
+      localStorage.setItem("userName", user_name);
     } else {
       alert("Username or password were incorrect...");
     }
