@@ -4,6 +4,11 @@ const { User, Binder, Card } = require("../../models");
 // Create a new user
 router.post("/", async (req, res) => {
   try {
+    let scripts = [
+      { src: "/js/logout.js" },
+      { src: "/js/index.js" },
+      { src: "/js/binderActions.js" },
+    ];
     const userData = await User.create(req.body);
 
     req.session.save(() => {
@@ -15,12 +20,17 @@ router.post("/", async (req, res) => {
       //   message: "You are now logged in!",
       //   session: req.session,
       // });
-      res
-        .render("dashboard", {
-          logged_in: true,
-        })
-        .status(200);
+      res.status(200);
+      res.render("dashboard", {
+        logged_in: true,
+        scripts,
+      });
     });
+    // res
+    //   .render("dashboard", {
+    //     logged_in: true,
+    //   })
+    //   .status(200);
   } catch (err) {
     res.status(400).json(err);
   }
