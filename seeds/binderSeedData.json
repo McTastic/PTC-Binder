@@ -4,7 +4,11 @@
     "user_id": 1
   },
   {
-    "binder_name": "Shiny",
-    "user_id": 1
+    "binder_name": "Brock's Binder",
+    "user_id": 3
+  },
+  {
+    "binder_name": "Gym Battles",
+    "user_id": 2
   }
 ]

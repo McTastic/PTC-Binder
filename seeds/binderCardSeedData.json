@@ -1,0 +1,32 @@
+[
+  {
+    "binder_id": 1,
+    "card_id": 1,
+    "binderBinderId": 1,
+    "cardCardId": 1
+  },
+  {
+    "binder_id": 1,
+    "card_id": 2,
+    "binderBinderId": 1,
+    "cardCardId": 2
+  },
+  {
+    "binder_id": 1,
+    "card_id": 3,
+    "binderBinderId": 1,
+    "cardCardId": 3
+  },
+  {
+    "binder_id": 2,
+    "card_id": 1,
+    "binderBinderId": 2,
+    "cardCardId": 1
+  },
+  {
+    "binder_id": 3,
+    "card_id": 3,
+    "binderBinderId": 3,
+    "cardCardId": 3
+  }
+]
