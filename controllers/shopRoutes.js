@@ -5,8 +5,8 @@ const withAuth = require("../utils/auth");
 router.get("/", withAuth, async (req, res) => {
   try {
     let scripts = [
-      { src: "/js/logout.js" },
-      { src: "/js/index.js" },
+      // { src: "/js/logout.js" },
+      // { src: "/js/index.js" },
       { src: "/js/binderActions.js" },
     ];
     const inventoryData = await Inventory.findAll({
