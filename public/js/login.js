@@ -14,7 +14,7 @@ const loginFormHandler = async (event) => {
     console.log(response);
     // console.log("User logged in...");
     if (response.ok) {
-      // alert("Go catch 'em all...");
+      alert("Go catch 'em all...");
       // document.location.replace("/");
       // localStorage.setItem("userName", user_name);
     } else {
@@ -38,7 +38,7 @@ const signupFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      // document.location.replace("/");
+      document.location.replace("/");
       localStorage.setItem("userName", user_name);
     } else {
       alert("Failed to sign up.");

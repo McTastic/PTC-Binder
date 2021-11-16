@@ -1,12 +1,13 @@
-<div data-api="{{card.card_api_id}}" class="card">
+<div class="container-fluid">
   <div class="row">
     <div
       class="card-group justify-content-evenly d-flex"
       style="min-width: 15rem;"
     >
-      <img src="{{card.card_img_url}}" class="cards" alt={{card_name}} />
+      <img src="{{card.card_img_url}}" class="card-img-top" alt={{card_name}} />
       <div class="card-body">
         <h5 class="card-title">{{card.card_name}}</h5>
+        <p class="card-text">{{description}}</p>
         <p class="card-text">{{action}}</p>
         <p class="card-text">{{price}}</p>
         <a href="#" class="btn btn-primary">Add to Cart</a>
