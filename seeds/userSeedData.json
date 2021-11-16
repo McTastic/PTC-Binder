@@ -1,17 +1,17 @@
 [
   {
-    "user_name": "bob",
+    "user_name": "ash_k",
     "password": "12345678",
-    "email": "email@example.com"
+    "email": "ash@example.com"
   },
   {
-    "user_name": "rick",
-    "password": "abcdefgh",
-    "email": "email2@example.com"
+    "user_name": "misty",
+    "password": "12345678",
+    "email": "misty@example.com"
   },
   {
-    "user_name": "john",
-    "password": "98765432",
-    "email": "email3@example.com"
+    "user_name": "brock",
+    "password": "12345678",
+    "email": "brock@example.com"
   }
 ]
