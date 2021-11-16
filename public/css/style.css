@@ -13,7 +13,7 @@
   background-repeat: no-repeat;
   background-position: center;
   width: auto;
-  height: 210px;
+  height: 180px;
   z-index: 100;
   position: relative;
 }
@@ -48,6 +48,15 @@ nav li {
 main {
   /* subtracting from px of jumbotron, nav & footer */
   min-height: calc(100vh - 342px);
+}
+
+.panel {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: larger;
+}
+
+.carousel-whole {
+  margin-top: 0.5em;
 }
 
 /* Add a gray background color and some padding to the footer */
